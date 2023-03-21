@@ -29,11 +29,13 @@ toggle.addEventListener("click", function () {
 
 window.scrollTo(0, 0);
 
+let video = document.querySelector("video");
+video.play();
+
 const registerVideo = () => {
   bound = document.querySelector(".scroll-bound");
   content = document.querySelector(".content");
 
-  video = document.querySelector("video");
   const scrollVideo = () => {
     const rawPercentScrolled =
       -bound.getBoundingClientRect().top / (bound.scrollHeight / 2);
