@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Site de Amandine Quellec</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="logo-container" >
+        <img class="logo" src="src/img/logo.svg" alt="mon logo">
+
+        <a href="#" class="header-name">Amandine · Quellec</a>
+      </div>
+
+      <div id="toggle"></div>
+
+      <div id="header-menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section id="home">
+      <div class="app">
+        <div class="scroll-bound">
+          <div class="content"> 
+            <video muted preload>
+              <source src="src/videos/animation_totale.mp4" type="video/webm">
+
+              <p>Your user agent does not support the HTML5 Video element.</p>
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about-container">
+        <img class="about-img" src="src/img/moi.jpg" alt="Photo d'Amandine Quellec">
+        
+        <div class="skills-container">
+          <p class="gray">Développeuse web junior</p>
+
+          <h1>Amandine Quellec</h1>
+
+          <p>Je m'appelle Amandine Quellec, je suis en deuxième année du DUT Métiers du Mulitmédia et de l'Internet. Je suis passionnée par tout ce qui touche à l'informatique</p>
+          
+          <div class="skills">
+            <p>Photoshop</p>
+
+            <p>Jquery</p>
+
+            <p>Illustrator</p>
+
+            <p>PHP</p>
+
+            <p>Indesign</p>
+
+            <p>Blender</p>
+
+            <p>Figma</p>
+
+            <p>After Effect</p>
+
+            <p>HTML</p>
+
+            <p>CSS</p>
+
+            <p>JavaScript</p>
+
+            <p>Myslq</p>
+
+            <p>Wordpress</p>
+          </div>
+          
+          <a target="_blank" href="src/files/cv.pdf"><p id="cv" >Télécharger mon cv</p></a>
+        </div>
+      </div>  
+    </section>
+
+    <section id="works">
+      <div class="works-container"> 
+        <h1>Mes projets</h1>
+
+        <p class="works-info">Mes projets ne sont plus trop à jour. Je vous propose en attendant que je les mets à jour je vous propose de regarder mon dossier technique avec mes meilleurs projets et des explications : <a href="src/files/Dossier_Technique_Amandine_Quellec.pdf">Dossier technique</a></p>
+
+        <div >
+          <div class="filters">
+            <button class="filter active" onclick="filterSelection('tous')">Tous</button>
+            <button class="filter" onclick="filterSelection('graphisme')"> Graphisme</button>
+            <button class="filter" onclick="filterSelection('intégration')"> Intégration</button>
+            <button class="filter" onclick="filterSelection('audiovisuel')"> Audiovisuel</button>
+          </div>
+
+          <div class="grid ">
+            <div class="work graphisme">
+              <div class="work-content">
+                <a target="_blank"  href="src/files/M2205_B_Quellec_Amandine_Segolene_Bartholomot_zoo.pdf">
+                  <img src="src/img/portfolio/zoo.png" alt="Zoo Jacques Rouxel">
+
+                  <h4>Zoo Jacques Rouxel</h4>
+
+                  <p>Flyer vectoriel</p>
+                </a>
+              </div>
+            </div>
+            
+            <div class="work intégration">
+              <div class="work-content">
+                <a target="_blank"  href="http://149.91.82.236/ignoterra/">
+                  <img src="src/img/portfolio/ignoterra.jpg" alt="Ignoterra">
+
+                  <h4>Ignoterra</h4>
+
+                  <p>Jeu d'énigmes</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="work audiovisuel">
+              <div class="work-content">
+                <a target="_blank" href="src/videos/pub_oreo.mp4">
+                  <img src="src/img/portfolio/oreo.jpg" alt="Pub Oréo">
+
+                  <h4>Pub Oréo</h4>
+
+                  <p>Vidéo</p>
+                </a>
+              </div>
+            </div>
+            
+            <div class="work graphisme">
+              <div class="work-content">
+                <a target="_blank" href="src/files/imac.pdf">
+                  <img src="src/img/portfolio/imac.jpg" alt="Ecole IMAC">
+
+                  <h4>Ecole IMAC</h4>
+
+                  <p>Infographie</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="work intégration">
+              <div class="work-content">
+                <a target="_blank" href="src/videos/nova.mp4">
+                  <img src="src/img/portfolio/nova.jpg" alt="Nova">
+
+                  <h4>Nova</h4>
+
+                  <p>Jeu en réalité virutelle </p>
+                </a>
+              </div>
+            </div>
+
+            <div class="work audiovisuel">
+              <div class="work-content">
+                <a target="_blank"  href="src/videos/galaxy.mp4">
+                  <img src="src/img/portfolio/galaxy.jpg" alt="Galaxy">
+
+                  <h4>Galaxy</h4>
+
+                  <p>Animation</p>
+                </a>
+              </div>
+            </div>
+            
+            <div class="work intégration">
+              <div class="work-content">
+                <a target="_blank" href="http://193.168.146.156/ToyStory">
+                  <img src="src/img/portfolio/toystory.jpg" alt="Toy Story">
+                  <h4>Toy Story</h4>
+                  <p>Mini-jeux</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="work graphisme">
+              <div class="work-content">
+                <a target="_blank" href="src/files/cv_creatif.pdf">
+                  <img src="src/img/portfolio/cv_creatif.jpg" alt="Cv Créatif">
+
+                  <h4>Cv Créatif</h4>
+
+                  <p>Print</p>
+                </a>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-container">
+        <h2>Me contacter</h2>    
+
+        <form method="post" action="demande_contact.php">
+          <div class="row">
+            <div class="col">
+              <div class="inputBox form-group">
+                <input class="form-control" type="text" name="prenom" required >
+
+                <span class="text">Prénom</span>
+                
+                <span class="line"></span>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class=" form-group inputBox">
+                <input class="form-control" type="text" name="nom" required>
+                
+                <span class="text">Nom</span>
+
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="inputBox form-group">
+                <input class="form-control" type="text"  name="mail" required>
+                
+                <span class="text">Mail </span>
+
+                <span class="line"></span>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="inputBox form-group">
+                <input class="form-control"  type="text" name="tel"  required>
+                  
+                <span class="text">Téléphone</span>
+
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="inputBox textarea form-group">
+                <textarea class="form-control"  name="message" required></textarea>
+                
+                <span class="text">Entrez votre message ici...</span>
+
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col form-group">
+              <input type="submit" name="contact" value="Envoyer">
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+          <span>Retrouvez-moi également sur LinkedIn !</span>
+
+          <a
+            href="https://www.linkedin.com/in/amandine-quellec/"
+            target="_blank"
+            >
+            <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </footer>
+    <script src="src/js/index.js" type="text/javascript" ></script>	   
+  </body>
+</html>

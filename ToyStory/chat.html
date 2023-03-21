@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Notre script pour afficher et envoyer les messages
+        });
+    </script>
+    <title>Chat jquery</title>
+</head>
+<body>
+    <h1>Ici mon chat</h1>
+    <div id="affichage">
+        ici les messages....
+    </div>
+    <p>
+        <form id="monform">
+        votre pseudo : <input type="text" id="pseudo"></br>
+        <hr>
+        votre message : <input type="text" id="message"> <button id="envoyer">envoyer</button>
+        </form>
+    </p>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#monform").on("submit",function(event){
+                event.preventDefault();
+            })
+
+            setInterval(function(){
+                                    console.log("raffraichir la liste des messages");
+                                    $.ajax({ url:"affichage.php"})
+                                        .done(function(resultat){
+                                            $("#affichage").html(resultat);
+                                            const words = resultat.split('*');
+                                            console.log(words[1]);
+                                            if (words[1]=="bleu</br>"){
+                                                $("#affichage").css("background-color","#00F");
+                                            }
+                                            if (words[1]=="vert</br>"){
+                                                $("#affichage").css("background-color","#0F0");
+                                            }
+                                        });
+                                  }, 1000);
+
+            console.log("démarrage du js...")
+            $("#envoyer").click(function(){
+                console.log("on appuie sur le bouton!");
+                $pseudo = $('#pseudo').val();
+                $message = $('#message').val();
+                console.log("et le pseudo est : " + $pseudo);
+                console.log("et le message est: " + $message);
+                //bon maintenant il faut envoyer tout ça à dire.php...
+                $("#message").focus();
+                $.ajax({
+                    method: "GET",
+                    data: {pseudo:$("#pseudo").val() , message:$("#message").val()},
+                    url:"dire.php"
+                });
+                $("#message").focus();
+                $("#message").val("");
+
+            });
+        });
+
+    </script>
+</body>
+</html>
