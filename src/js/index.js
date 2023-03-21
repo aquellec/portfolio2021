@@ -30,7 +30,6 @@ toggle.addEventListener("click", function () {
 window.scrollTo(0, 0);
 
 let video = document.querySelector("video");
-video.play();
 
 const registerVideo = () => {
   bound = document.querySelector(".scroll-bound");
